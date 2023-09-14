@@ -1,9 +1,14 @@
+import Home from "../Home/Home";
 
-
-const Cart = () => {
+const Cart = ({cartCourse}) => {
     return (
-        <div>
-            
+        <div className="border border-solid w-96 h-96">
+           
+            {
+                cartCourse.map(item=>(
+                    <p>{item.course_name}</p>
+                ))
+            }
         </div>
     );
 };

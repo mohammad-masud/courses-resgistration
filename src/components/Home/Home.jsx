@@ -14,13 +14,15 @@ useEffect(()=>{
 })
 
 const handleCourse=(course)=>{
+    
 const newCartCourse=[...cartCourse,course];
 setCartCourse(newCartCourse);
+
 }
 
 
     return (
-        <div>
+        <div className="flex">
         <div className="flex flex-wrap w-2/3">
             {
                 courses.map((course)=>(
@@ -38,7 +40,7 @@ setCartCourse(newCartCourse);
             }
         </div>
         <div>
-
+            <Cart cartCourse={cartCourse}></Cart>
         </div>
         </div>
     );
