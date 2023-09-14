@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import Cart from "../Cart/Cart";
 
 
 
 const Home = () => {
 const[courses, setCourses]=useState([]);
+const [cartCourse, setCartCourse]=useState([]);
 
 useEffect(()=>{
     fetch('./data.json')
@@ -11,8 +13,14 @@ useEffect(()=>{
     .then(data=>setCourses(data))
 })
 
+const handleCourse=(course)=>{
+const newCartCourse=[...cartCourse,course];
+setCartCourse(newCartCourse);
+}
+
 
     return (
+        <div>
         <div className="flex flex-wrap w-2/3">
             {
                 courses.map((course)=>(
@@ -24,10 +32,14 @@ useEffect(()=>{
                            <p>$Price: {course.price}</p>
                            <p>Credit:{course.credit}hr</p>
                         </div>
-                     <button className="w-3/4 bg-slate-400 mx-auto">Select</button>   
+                     <button className="w-3/4 bg-slate-400 mx-auto" onClick={()=>handleCourse(course)}>Select</button>   
                     </div>
                 ))
             }
+        </div>
+        <div>
+
+        </div>
         </div>
     );
 };
