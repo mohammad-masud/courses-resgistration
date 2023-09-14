@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "img": "https://i.ibb.co/ZGFgs3f/Rectangle-2-4.png",
+      "course_name": "Introduction to C Programming",
+      "course_details": "Learn the basics of HTML, CSS, and JavaScript to kickstart your web development journey.",
+      "price": 49.99,
+      "credit": 3
+    },
+    {
+      "id": 2,
+      "img": "https://i.ibb.co/sgYF8Jj/Rectangle-2.png",
+      "course_name": "Introduction to Python Programming",
+      "course_details": "Explore the world of data science and analytics with Python and machine learning.",
+      "price": 79.99,
+      "credit": 4
+    },
+    {
+      "id": 3,
+      "img": "https://i.ibb.co/TmP0gGk/Rectangle-2-6.png",
+      "course_name": "Graphic Design Mastery",
+      "course_details": "Explore the world of data science and analytics with Python and machine learning.",
+      "price": 59.99,
+      "credit": 3
+    },
+    {
+      "id": 4,
+      "img": "https://i.ibb.co/TL4GBwZ/Rectangle-2-5.png",
+      "course_name": "Mobile App Development with React ",
+      "course_details": "Explore the world of data science and analytics with Python and machine learning.",
+      "price": 69.99,
+      "credit": 4
+    },
+    {
+      "id": 5,
+      "img": "https://i.ibb.co/4SsTCsL/Rectangle-3-1.png",
+      "course_name": "AWS Essentials",
+      "course_details": "Explore the world of data science and analytics with Python and machine learning.",
+      "price": 54.99,
+      "credit": 3
+    },
+    {
+      "id": 6,
+      "img": "https://i.ibb.co/MZcPdQ8/Rectangle-2-1.png",
+      "course_name": "Machine Learning for Beginners",
+      "course_details": "Explore the world of data science and analytics with Python and machine learning.",
+      "price": 64.99,
+      "credit": 4
+    },
+    {
+      "id": 7,
+      "img": "https://i.ibb.co/kxJZt3w/Rectangle-2-3.png",
+      "course_name": "Basic of Algorithm",
+      "course_details": "Explore the world of data science and analytics with Python and machine learning.",
+      "price": 49.99,
+      "credit": 3
+    },
+    {
+      "id": 8,
+      "img": "https://i.ibb.co/251rXQQ/Rectangle-3.png",
+      "course_name": "Data Structure Basics",
+      "course_details": "Explore the world of data science and analytics with Python and machine learning.",
+      "price": 59.99,
+      "credit": 3
+    },
+    {
+      "id": 9,
+      "img": "https://i.ibb.co/Qb2hd8d/Rectangle-2-2.png",
+      "course_name": "C Programming",
+      "course_details": "Explore the world of data science and analytics with Python and machine learning.",
+      "price": 29.99,
+      "credit": 2
+    }
+  ]
+  
