@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import Cart from "../Cart/Cart";
-
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 
 const Home = () => {
 const[courses, setCourses]=useState([]);
 const [cartCourse, setCartCourse]=useState([]);
+const [totalCredit, setTotalCredit]=useState(0);
+const [creditRemaining, setCreditRemaining]=useState(20);
 
 useEffect(()=>{
     fetch('./data.json')
@@ -14,9 +17,34 @@ useEffect(()=>{
 })
 
 const handleCourse=(course)=>{
-    
-const newCartCourse=[...cartCourse,course];
-setCartCourse(newCartCourse);
+    const isExist=cartCourse.find((item)=>item.id==course.id);
+    let count=course.credit;
+    if(isExist){
+        Swal.fire({
+            icon: 'error',
+            text: 'This course already added in cart',
+          });
+    }else{
+        cartCourse.forEach(item=>{
+            count=count+item.credit;
+        })
+            const newCartCourse=[...cartCourse,course];
+            const totalRemaining=20-count;
+            setCartCourse(newCartCourse);
+            if(count<20){
+                setTotalCredit(count);
+            }else{
+                return Swal.fire({
+                    icon: 'error',
+                    text: 'your remaining credit isnt enough to add this course',
+                  });
+            }
+           
+            setCreditRemaining(totalRemaining);
+            
+
+    }
+
 
 }
 
@@ -40,7 +68,7 @@ setCartCourse(newCartCourse);
             }
         </div>
         <div>
-            <Cart cartCourse={cartCourse}></Cart>
+            <Cart cartCourse={cartCourse} totalCredit={totalCredit} creditRemaining={creditRemaining}></Cart>
         </div>
         </div>
     );

@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <h1>Vite + React</h1>
+      <h1 className='text-center font-bold text-3xl py-4'>Course Registration</h1>
       <Home></Home>
     </>
   )
