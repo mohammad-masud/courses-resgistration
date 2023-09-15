@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import Cart from "../Cart/Cart";
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
+import { FaDollarSign } from 'react-icons/fa';
+import { GoBook } from 'react-icons/go';
+
 
 
 const Home = () => {
@@ -51,18 +54,20 @@ const handleCourse=(course)=>{
 
     return (
         <div className="flex">
-        <div className="flex flex-wrap w-2/3">
+        <div className="flex flex-wrap w-2/3 ">
             {
                 courses.map((course)=>(
                     <div key={course.id} className="w-1/3  gap-5 py-2">
                     <img src={course.img} alt="" />
                     <h2 className="font-bold py-4">{course.course_name}</h2>
                     <p>{course.course_details}</p>
-                        <div className="flex gap-24">
-                           <p>$Price: {course.price}</p>
+                        <div className="flex gap-2 items-center">
+                           <p><FaDollarSign/></p>
+                           <p>Price: {course.price}</p>
+                           <p className="ml-6"><GoBook/></p>
                            <p>Credit:{course.credit}hr</p>
                         </div>
-                     <button className="w-3/4 bg-slate-400 mx-auto" onClick={()=>handleCourse(course)}>Select</button>   
+                     <button className="w-3/4 bg-blue-600 text-white mx-auto" onClick={()=>handleCourse(course)}>Select</button>   
                     </div>
                 ))
             }
