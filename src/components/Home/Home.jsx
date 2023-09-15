@@ -34,7 +34,7 @@ const handleCourse=(course)=>{
             const newCartCourse=[...cartCourse,course];
             const totalRemaining=20-count;
             setCartCourse(newCartCourse);
-            if(count<20){
+            if(count<=20){
                 setTotalCredit(count);
             }else{
                 return Swal.fire({
